@@ -1,0 +1,6 @@
+Total Wiktionary Title count: 557336
+Language Title count: 157236
+Word count in dictionary: 653214
+Char count in dictionary: 6605930
+Dictionary size on disk (bytes): 2097327
+Dictionary size in memory (bytes): 4641706
