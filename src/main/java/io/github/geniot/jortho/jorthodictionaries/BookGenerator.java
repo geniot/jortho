@@ -32,7 +32,7 @@ import java.util.zip.*;
 
 /**
  * How to use
- * <li>Download the latest Wiktionary file "pages_articles.xml".
+ * Download the latest Wiktionary file "pages_articles.xml".
  * It is typical compressed. The position changed. I found it last at:
  * <ul>
  * <li>http://dumps.wikimedia.org/arwiktionary/latest/arwiktionary-latest-pages-articles.xml.bz2
@@ -45,10 +45,10 @@ import java.util.zip.*;
  * <li>http://dumps.wikimedia.org/plwiktionary/latest/plwiktionary-latest-pages-articles.xml.bz2
  * <li>http://dumps.wikimedia.org/ruwiktionary/latest/ruwiktionary-latest-pages-articles.xml.bz2
  * </ul>
- * </li>
+ *
  * 
- * <li>start the Generator with follow command line:<br>
- * java -Xmx256m com.inet.spell.wiktionary.BookGenerator de <folder with file></li>
+ * start the Generator with follow command line:<br>
+ * java -Xmx256m com.inet.spell.wiktionary.BookGenerator de folder with file
  * @author Volker
  */
 public abstract class BookGenerator {

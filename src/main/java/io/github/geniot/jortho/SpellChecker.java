@@ -56,19 +56,19 @@ import javax.swing.text.JTextComponent;
  * In the most cases this is the only class that you need to add spell checking to your application.
  * First you need to do a one-time registration of your dictionaries. In standalone applications this can
  * look like:
- * <code><pre>
+ * <code>
  * SpellChecker.registerDictionaries( new URL("file", null, ""), "en,de", "de" );
- * </pre></code>
+ * </code>
  * and in an applet this will look like:
- * <code><pre>
+ * <code>
  * SpellChecker.registerDictionaries( getCodeBase(), "en,de", "en" );
- * </pre></code>
+ * </code>
  * After this you can register your text component that should have the spell checker features
  * (Highlighter, context menu, spell checking dialog). 
- * This looks like:<code><pre>
+ * This looks like:<code>
  * JTextPane text = new JTextPane();
  * SpellChecker.register( text );
- * </pre></code>
+ * </code>
  * @author Volker Berlin
  */
 public class SpellChecker {
@@ -191,7 +191,7 @@ public class SpellChecker {
      * <li>languages</li>
      * <li>extension</li>
      * </ul>
-     * <b>Samples:</b> <code><pre>
+     * <b>Samples:</b> <code>
      * // Load the configuration and dictionaries from the current working directory and use the current locale or the first language as default 
      * SpellChecker.registerDictionaries( null, null );
      * 
@@ -207,7 +207,7 @@ public class SpellChecker {
      * // Sample content from a file dictionaries.cnf
      * extension=.ortho
      * languages=de,en,it,fr,es,ru
-     * </pre></code>
+     * </code>
      * 
      * @param baseURL
      *            the base URL where the dictionaries and configuration file can be found. If null then first in the classloader root is searched.
@@ -268,7 +268,7 @@ public class SpellChecker {
      * There is only one dictionary loaded in memory at a given time.
      * You can download the dictionary files from http://sourceforge.net/projects/jortho/files/Dictionaries/
      * 
-     * <p><b>Samples:</b> <code><pre>
+     * <p><b>Samples:</b> <code>
      * // Load the dictionaries from the current working directory and use the current locale or the first language as default 
      * SpellChecker.registerDictionaries( null, "de,en", null );
      * 
@@ -281,7 +281,7 @@ public class SpellChecker {
      * // Load the dictionaries from the same web location like the applet and use the German dictionary as default 
      * SpellChecker.registerDictionaries( myApplet.getCodeBase(), "de,en", "de" );
      * 
-     * </pre></code>
+     * </code>
      * 
      * @param baseURL
      *            the base URL where the dictionaries can be found. If null then URL("file", null, "") is used.
@@ -304,7 +304,7 @@ public class SpellChecker {
      * There is only one dictionary loaded in memory at a given time.
      * You can download the dictionary files from http://sourceforge.net/projects/jortho/files/Dictionaries/
      * 
-     * <p><b>Samples:</b> <code><pre>
+     * <p><b>Samples:</b> <code>
      * // Load the dictionaries from the current working directory 
      * // and use the current locale or the first language as default.
      * // The dictionaries must be named dictionary_de.ortho and dictionary_en.ortho
@@ -323,7 +323,7 @@ public class SpellChecker {
      * // The dictionaries must be named dictionary_de.bin and dictionary_en.bin in the codebase
      * SpellChecker.registerDictionaries( myApplet.getCodeBase(), "de,en", "de", ".bin" );
      * 
-     * </pre></code>
+     * </code>
      * 
      * @param baseURL
      *            the base URL where the dictionaries can be found. If null then URL("file", null, "") is used.
@@ -464,9 +464,9 @@ public class SpellChecker {
      * Show the Spell Checker dialog for the given JTextComponent. It will be do nothing if
      * the JTextComponent is not editable or there are no dictionary loaded.
      * The action for this method can you receive via:
-     * <code><pre>
+     * <code>
      * Action action = text.getActionMap().get("spell-checking");
-     * </pre></code>
+     * </code>
      * The action is only available if you have enable the short key (F7).
      * @param text JTextComponent to check
      * @param options override the default options for this menu.
@@ -631,10 +631,10 @@ public class SpellChecker {
      * Creates a menu item "Languages" (or the equivalent depending on the user language) with a sub-menu
      * that lists all available dictionary languages. 
      * You can use this to add this menu item to your own popup or to your menu bar.
-     * <code><pre>
+     * <code>
      * JPopupMenu popup = new JPopupMenu();
      * popup.add( SpellChecker.createLanguagesMenu() );
-     * </pre></code>
+     * </code>
      * @return the new menu.
      */
     public static JMenu createLanguagesMenu(){
@@ -645,10 +645,10 @@ public class SpellChecker {
      * Creates a menu item "Languages" (or the equivalent depending on the user language) with a sub-menu
      * that lists all available dictionary languages. 
      * You can use this to add this menu item to your own popup or to your menu bar.
-     * <code><pre>
+     * <code>
      * JPopupMenu popup = new JPopupMenu();
      * popup.add( SpellChecker.createLanguagesMenu() );
-     * </pre></code>
+     * </code>
      * @param options override the default options for this menu.
      * @return the new menu.
      */
@@ -888,7 +888,7 @@ public class SpellChecker {
 
     /**
      * Gets the current <code>Locale</code>. The current Locale will be set if the user selects
-     * one, or when calling <ode>registerDictionaries</code>.
+     * one, or when calling <code>registerDictionaries</code>.
      * @return the current <code>Locale</code> or null if none is set.
      * @see #registerDictionaries(URL, String, String)
      * @see #isDictionaryLoaded()
