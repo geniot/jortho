@@ -2,6 +2,20 @@ Copied from:
 
 http://jortho.sourceforge.net/
 
+#Changes
+- Mavenized
+- Jortho spelling dictionaries are in the classpath (ar,de,en,es,fr,it,nl,pl,ru)
+
+# Usage
+
+        <dependency>
+            <groupId>io.github.geniot</groupId>
+            <artifactId>jortho</artifactId>
+            <version>1.1</version>
+        </dependency>
+
+https://github.com/geniot/jortho/blob/main/src/test/java/io/github/geniot/jortho/SampleApplication.java
+
 ![Suggestions dialog](screenshots/1.png)
 ![Context dialog](screenshots/2.png)
 ![User dictionary](screenshots/3.png)
