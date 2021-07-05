@@ -57,7 +57,7 @@ class DictionaryFactory {
      * @throws NullPointerException
      *             If filename is null.
      */
-    public void loadWordList( URL filename ) throws IOException {
+    public void loadWordList( String filename ) throws IOException {
         loadWords( new WordIterator( filename ) );
     }
     

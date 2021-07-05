@@ -22,9 +22,9 @@
  */
 package io.github.geniot.jortho;
 
-import java.awt.Dialog;
-import java.awt.Frame;
-import java.awt.Window;
+import javax.swing.*;
+import javax.swing.text.JTextComponent;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ItemEvent;
 import java.awt.event.KeyEvent;
@@ -34,22 +34,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.Locale;
-import java.util.Properties;
-import java.util.WeakHashMap;
-
-import javax.swing.AbstractAction;
-import javax.swing.ButtonGroup;
-import javax.swing.JMenu;
-import javax.swing.JPopupMenu;
-import javax.swing.JRadioButtonMenuItem;
-import javax.swing.JToggleButton;
-import javax.swing.KeyStroke;
-import javax.swing.SwingUtilities;
-import javax.swing.text.JTextComponent;
+import java.util.*;
 
 /**
  * This class is the major class of the spell checker JOrtho (Java Orthography Checker). 
@@ -819,7 +804,7 @@ public class SpellChecker {
                     try {
                         DictionaryFactory factory = new DictionaryFactory();
                         try {
-                            factory.loadWordList( new URL( baseURL, locale + File.separator + "dictionary_" + locale + extension ) );
+                            factory.loadWordList( "dictionary_" + locale + extension);
                         } catch( Exception ex ) {
                         	SpellChecker.getMessageHandler().handleError( ex.toString(), "Error", ex );
                         }

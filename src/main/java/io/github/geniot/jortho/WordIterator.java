@@ -54,7 +54,7 @@ public class WordIterator implements Iterator<String> {
      * @throws NullPointerException
      *             If filename is null.
      */
-    public WordIterator( URL filename ) throws IOException {
+    public WordIterator( String filename ) throws IOException {
         this( createInflaterStream(filename), "UTF8" );
     }
     
@@ -95,10 +95,11 @@ public class WordIterator implements Iterator<String> {
      * @return the stream
      * @throws IOException If an I/O error occurs.
      */
-    private static InputStream createInflaterStream( URL filename ) throws IOException{
-        URLConnection conn = filename.openConnection();
-        conn.setReadTimeout( 5000 );
-        InputStream input = conn.getInputStream();
+    private static InputStream createInflaterStream( String filename ) throws IOException{
+//        URLConnection conn = filename.openConnection();
+//        conn.setReadTimeout( 5000 );
+//        InputStream input = conn.getInputStream();
+        InputStream input = Thread.currentThread().getContextClassLoader().getResourceAsStream(filename);
         input = new InflaterInputStream( input );
         return new BufferedInputStream( input );
     }
