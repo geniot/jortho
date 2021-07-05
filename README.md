@@ -2,7 +2,7 @@ Copied from:
 
 http://jortho.sourceforge.net/
 
-#Changes
+# Changes
 - Mavenized
 - Jortho spelling dictionaries are in the classpath (ar,de,en,es,fr,it,nl,pl,ru)
 
